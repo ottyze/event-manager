@@ -1,0 +1,224 @@
+:root {
+	--default-font: "Segoe UI", Roboto, Helvetica, Arial, serif;
+	--gradient: linear-gradient(to right, #4607f2, 65%, #d900ff);
+}
+
+/* setting global font */
+body {
+	font-family: var(--default-font);
+	margin: 0;
+}
+
+/* font color, padding, and gradient set */
+header {
+	color: #fdfbfb;
+	padding: 0.5rem 0.5rem 2rem;
+	background: var(--gradient);
+}
+
+/* margin for site tile */
+.pgtitle {
+	margin: 0 0 2rem;
+}
+
+/* drop down sizing */
+.showing {
+	font-size: 0.55rem;
+}
+
+/* filter form settings */
+#filter form {
+	display: flex;
+	flex-direction: row;
+	background-color: #4607f2;
+	border: 1px solid #fdfbfb;
+	padding: 1rem 0.5rem 0.25rem;
+	margin-right: 1rem;
+	border-radius: 0.5rem;
+	gap: 1rem;
+}
+
+/* submit/clear filter buttons */
+.form-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+/* filter options */
+#filter .filters {
+	border-radius: 0.3rem;
+	background-color: #dfdfdffa;
+	color: #000;
+	padding: 0.25rem;
+}
+
+/* taking the borders out of the input fields */
+.inputBox {
+	border: none;
+}
+
+/* button formatting */
+#filter button {
+	display: flex;
+	gap: 1rem;
+	border: none;
+	background-color: #dfdfdffa;
+	border-radius: 0.3rem;
+	margin: 0.2rem;
+	padding: 0.25rem;
+}
+
+/* placing filter events in the middle of the border */
+.filterTitle {
+	position: absolute;
+	background-color: #4607f2;
+	padding: 0 0.2rem;
+	top: 105px;
+	left: 20px;
+	font-size: 0.75rem;
+	z-index: 1;
+}
+
+/* div holding the list of events */
+#events-container {
+	background-color: #dfdfdffa;
+	margin: 0;
+	padding: 0;
+}
+
+/* setting the list of events to flex */
+#events-container ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 1rem 0 2rem;
+	align-items: stretch
+}
+
+/* sizing the cards */
+#events-container li {
+	padding: 0.5rem 0;
+	box-sizing: border-box;
+	width: 20%;
+	display: flex;
+	align-items: stretch;	
+}
+
+/* flex for the card info */
+.card {
+	background-color: #fdfbfb;
+	display: flex;
+	flex-direction: column;
+	margin: 0.25rem;
+	padding: 0.5rem;
+	box-sizing: border-box;
+	width: 100%;
+}
+.card .picture{
+	max-width: 100%;
+}
+
+/* learn more button for each card */
+.learn-more {
+	border: none;
+	font-size: 0.65rem;
+	width: 25%;
+}
+
+/* title for each card */
+.event-title {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+/* date for each card */
+.date {
+	font-size: 0.75rem;
+	margin-bottom: 0;
+}
+
+/* location for each card */
+.location {
+	margin-top: 0;
+	font-size: 1rem;
+}
+
+/* description for each card (default to hidden) */
+.description {
+	font-size: 1rem;
+	display: none;
+}
+
+/* showing description when learn more is toggled */
+.description.shown {
+	display: block;
+}
+
+/* responsive styles */
+@media screen and (max-width: 768px) {
+	/* setting filters to vertical flex instead of row */
+	#filter form {
+		flex-direction: column;
+	}
+
+	form div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* setting filters to max width */
+	.filters {
+		flex: 1 1 100%;
+	}
+
+	/* flex for the buttons to be on the same row */
+	.form-buttons {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.form-buttons button {
+		flex: 1;
+		justify-content: center;
+	}
+
+	/* setting filter label widths equal */
+	form label {
+		width: 10%;
+	}
+
+	/* setting input field widths equal */
+	form .inputBox {
+		width: 90%;
+	}
+
+	/* setting the card list to be one card per row with max width */
+	#events-container li {
+		flex: 1 1 100%;
+		max-width: 100%;
+		padding: 0.5rem;
+	}
+
+	.card {
+		max-width: 100vw;
+	}
+}
+
+#top-nav, #bottom-nav{
+	display: flex;
+	align-items: center;
+	padding-bottom: 0.75rem;
+}
+#top-nav button, #bottom-nav button{
+	border: none;
+	background-color: #dfdfdffa;
+	border-radius: 0.3rem;
+	margin: 0.2rem;
+	padding: 0.25rem;
+	height: 1.5rem;
+}
+button{
+	cursor: pointer;
+}

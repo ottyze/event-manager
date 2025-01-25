@@ -1,2 +1,1 @@
-# event-manager
-web app event manager, can filter events by title, date, venue, time.
+[CLICK TO GO TO ACTUAL README (HTML)](https://github.com/TheNuclearNexus/webapps-project-2/tree/main/readme)

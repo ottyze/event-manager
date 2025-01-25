@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Event Manager</title>
+		<link href="assets/styles.css" rel="stylesheet" />
+		<script defer src="./js/index.js" type="module"></script>
+	</head>
+	<body>
+		<header>
+			<h1 class="pgtitle">My Events Manager</h1>
+			<div id = "top-nav">
+				<div class="showing">
+					<h2>Showing:</h2>
+				</div>
+				<button type="button" class="prevButton">Prev</button>
+				<button type="button" class= "nextButton">Next</button>
+			</div>
+			<div id="filter">
+				<h2 class="filterTitle">Filter Events</h2>
+				<form>
+					<div class="filters">
+						<label for="show">Show</label>
+						<select class="inputBox" id="show" name="showtypes">
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+						<option value="100">100</option>
+						<option value="All">All</option>
+						</select>
+					</div>
+					<div class="filters">
+						<label for="title">Title</label>
+						<input class="inputBox" type="text" id="title" name="title"/>
+					</div>
+					<div class="filters">
+						<label for="desc">Desc</label>
+						<input class="inputBox" type="text" id="desc" name="desc"/>
+					</div>
+					<div class="filters">
+						<label for="date">Date</label>
+						<input class="inputBox" type="text" id="date" name="date"/>
+					</div>
+					<div class="form-buttons">
+						<button type="submit">Submit</button>
+						<button type="reset">Clear Filters</button>
+					</div>
+				</form>
+			</div>
+		</header>
+		<!-- div holding the list of events -->
+		<div id="events-container">
+			<ul id="events-list">
+			</ul>
+		</div>
+		<div id = "bottom-nav">
+			<div class="showing">
+				<h2>Showing:</h2>
+			</div>
+			<button type="button" class="prevButton">Prev</button>
+			<button type="button" class= "nextButton">Next</button>
+		</div>	
+	</body>
+</html>
